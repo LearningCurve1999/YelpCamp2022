@@ -1,0 +1,24 @@
+<% if(success && success.length) 
+    //to check if theres any value inside of an array, check its length //and then return
+    //this alert flash message to be true. 
+    //Bootstrap adding style 
+    {%>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= success %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+    <% } %>
+
+        <% if(error && error.length)
+//Same as the success flash, check if theres an error. if the error
+//exist flash a message with an alert class, if theres no error return and empty alert.
+        {%>
+           <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <%= error %>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+    <% } %>
